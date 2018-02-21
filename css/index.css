@@ -1,0 +1,29 @@
+.total_block {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: rgb(14, 233, 14);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.total_block div {
+    padding-top: 10px;
+    background-color: #212529;
+}
+
+.table-striped {
+    margin-bottom: -1px;
+}
+
+.total {
+    padding-right: 30px;
+}
+
+.text-primary {
+    cursor: pointer;
+}
+
+.title {
+    font-weight: bold;
+    padding-left: 15px
+}

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>VITA Business</title>
+
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="css/jquery/jquery-confirm.min.css" />
+    <link rel="stylesheet" href="css/fontawesome/fa-svg-with-js.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Vita</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link home_text" href="#">
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle department_text" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <input class="form-control" type="text" placeholder="Buscar" aria-label="Buscar">
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main role="main">
+        <div class="jumbotron">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="btn-group btn-group-md" style="float: right;">
+                            <button type="button" class="btn">Bajas</button>
+                            <button type="button" class="btn btn-secondary">Cambios</button>
+                            <button type="button" class="btn btn-primary">Altas</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="title">Carrito</h4>
+
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="images/aceite.jpg" width="60px" class="img-thumbnail" alt="aceite">
+                            </td>
+                            <td>
+                                <p data-toggle="tooltip" data-placement="top" title="PlayStation Controler DualShock4, Magma Red - PlayStation 4 Standard Edition">Aceite Capullo 100% puro de canola 845 ml</p>
+                                <small class="text-muted float-left">Aceites de cocina</small>
+                                <small class="text-primary float-right delete_item">Eliminar</small>
+                            </td>
+                            <td>
+                                <small class="text-muted">
+                                    <del>
+                                        <span class="money_type">$</span>
+                                        <span class="">27.50</span>
+                                    </del>
+                                    <span> - </span>
+                                    <div class="btn-group">
+                                        <input class="form-control discount" type="number" value="0" min="0" max="100" style="width: 75px;height: 25px;">
+                                        <button type="button" class="btn btn-secondary" style="height: 25px;padding: 0;">%</button>
+                                    </div>
+                                </small>
+                                <br/>
+                                <span class="money_type">$</span>
+                                <span class="total_per_unit" data-price="27.50">27.50</span>
+
+                                <i class="fas fa-eye-slash float-right" hidden></i>
+                                <i class="fas fa-eye float-right"> </i>
+                                <small class="text-primary float-right">Desc. </small>
+                            </td>
+                            <td>
+                                <input class="form-control quantity" type="number" value="1" min="1" style="width: 100px;">
+                            </td>
+                            <td>
+                                <span class="money_type">$</span>
+                                <span class="subtotal">27.50</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/coke_600ml.jpg" width="60px" class="img-thumbnail" alt="Coke">
+                            </td>
+                            <td>
+                                <p data-toggle="tooltip" data-placement="top" title="">Refresco Coca Cola botella de 600 ml</p>
+                                <small class="text-muted float-left">Refresco</small>
+                                <small class="text-primary float-right delete_item">Eliminar</small>
+                            </td>
+                            <td>
+                                <span class="money_type">$</span>
+                                <span class="total_per_unit" data-price="13.50">13.50</span>
+                                <small class="text-primary float-right">Descuento</small>
+                            </td>
+                            <td>
+                                <input class="form-control quantity" type="number" value="1" min="1" style="width: 100px;">
+                            </td>
+                            <td>
+                                <span class="money_type">$</span>
+                                <span class="subtotal">13.50</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/sabritas.jpg" width="60px" class="img-thumbnail" alt="sabritas">
+                            </td>
+                            <td>
+                                <p data-toggle="tooltip" data-placement="top" title="Papas Ruffles sabor queso 200 g">Papas Ruffles sabor queso 200 g</p>
+                                <small class="text-muted float-left">Papas y Frituras</small>
+                                <small class="text-primary float-right delete_item">Eliminar</small>
+                            </td>
+                            <td>
+                                <span class="money_type">$</span>
+                                <span class="total_per_unit" data-price="38.00">38.00</span>
+                                <small class="text-primary float-right">Descuento</small>
+                            </td>
+                            <td>
+                                <input class="form-control quantity" type="number" value="1" min="1" style="width: 100px;">
+                            </td>
+                            <td>
+                                <span class="money_type">$</span>
+                                <span class="subtotal">38.00</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="row total_block">
+                    <div class="col-9">
+                        <p class="float-left">Total</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="float-right">
+                            <span class="money_type">$</span>
+                            <span class="total">0</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- -######################################################################Altas -->
+                <div id="register">
+                    <div class="row">
+                        <div class="offset-sm-3 col-sm-6">
+                            <div class="form-group">
+                                <label for="product_name">Nombre:</label>
+                                <label>*</label>
+                                <input type="text" class="form-control" id="product_name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="description">Descripción:</label>
+                                <textarea class="form-control" rows="3" id="description"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="characteristics">Característica:</label>
+                                <textarea class="form-control" rows="3" id="characteristics"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="brand_name">Selecciona marca:</label>
+                                <label>*</label>
+                                <select class="form-control" id="brand_name">
+                                    <option value="0">No aplica</option>
+                                    <option value="1">Coca cola</option>
+                                    <option value="2">Pepsi</option>
+                                    <option value="3">Santa Clara</option>
+                                    <option value="4">Ariel</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="category_name">Selecciona categoria (presiona control y haz click para selecionar mas de uno):</label>
+                                <select multiple class="form-control" id="category_name">
+                                    <option value="0">Despensa</option>
+                                    <option value="1">2</option>
+                                    <option value="2">3</option>
+                                    <option value="3">4</option>
+                                    <option value="4">5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="offset-3 col-sm-6">
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label for="bar_code">Codigo de Barras:</label>
+                                    <label>*</label>
+                                    <input type="number" class="form-control" id="bar_code">
+                                </div>
+
+                                <div class="col form-group">
+                                    <label for="provider_price">Precio de proveedor:</label>
+                                    <label>*</label>
+                                    <input type="number" class="form-control" id="provider_price">
+                                </div>
+
+                                <div class="col form-group">
+                                    <label for="client_price">Precio al cliente:</label>
+                                    <label>*</label>
+                                    <input type="number" class="form-control" id="client_price">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="offset-3 col-sm-6">
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label for="quantity">Cantidad:</label>
+                                    <input type="number" class="form-control" id="quantity">
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col form-group" style="padding-right: 0;">
+                                            <label for="net_content">Cont. Neto:</label>
+                                            <input type="number" class="form-control" id="net_content">
+                                        </div>
+                                        <div class="col form-group" style="padding-left: 0;">
+                                            <label for="measurement">Medida:</label>
+                                            <select class="form-control" id="measurement">
+                                                <option value="0">No aplica</option>
+                                                <option value="1">ml</option>
+                                                <option value="2">kg</option>
+                                                <option value="3">litros</option>
+                                                <option value="4">oz</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col form-group">
+                                    <label for="presentation">Presentacion:</label>
+                                    <select class="form-control" id="presentation">
+                                        <option value="0">No aplica</option>
+                                        <option value="1">Botella de plastico</option>
+                                        <option value="2">Botella de vidrio</option>
+                                        <option value="3">Botella retornable</option>
+                                        <option value="4">Lata</option>
+                                        <option value="5">Caja</option>
+                                        <option value="6">Sobre</option>
+                                        <option value="7">Paquete</option>
+                                        <option value="8">Bolsa</option>
+                                        <option value="8">envoltura</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="offset-3 col-sm-6 form-group">
+                            <label for="image">Imagen:</label>
+                            <input type="file" class="form-control" id="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </main>
+
+    <footer class="container">
+        <p>&copy; BMN 2017-2018</p>
+    </footer>
+
+    <script src="js/jquery/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery/jquery-confirm.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/fontawesome/fa-brands.min.js"></script>
+    <script src="js/fontawesome/fa-regular.min.js"></script>
+    <script src="js/fontawesome/fa-solid.min.js"></script>
+    <script src="js/fontawesome/fa-v4-shims.min.js"></script>
+    <script src="js/fontawesome/fontawesome-all.min.js"></script>
+    <script src="js/fontawesome/fontawesome.min.js"></script>
+    <script src="js/elevatezoom/jquery.elevateZoom-3.0.8.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            const business_name = "Amazon";
+
+
+            $('img').elevateZoom({
+                scrollZoom: true
+            });
+
+        })
+
+
+        function confirmDialog(item) {
+            $.confirm({
+                theme: 'dark',
+                type: 'orange',
+                icon: 'fa fa-warning',
+                title: 'Advertencia!',
+                content: '¿Está seguro de que desea eliminar?',
+                buttons: {
+
+                    cancel: {
+                        text: 'Cancelar',
+                        btnClass: 'btn-secondary',
+                        action: function() {
+                            $.alert('Canceled!');
+                        }
+                    },
+                    confirm: {
+                        text: 'Eliminar',
+                        btnClass: 'btn-primary',
+                        keys: ['enter', 'shift'],
+                        action: function() {
+                            var cart = item.closest('table');
+                            var block = item.closest('tr');
+                            block.remove();
+                            getTotalSale(cart);
+                        }
+                    }
+                }
+            });
+        };
+    </script>
+    <!-- poner ofertas de 2 por uno -->
+    <!-- ver los de kilos en azucar -->
+    <!-- productos por
+medida liquida
+medida gramos
+tamaño nuevo codigo de barras
+tallas
+numeracion -->
+</body>
+
+</html>
