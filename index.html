@@ -19,7 +19,8 @@
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="#">Vita</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
@@ -36,7 +37,8 @@
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle department_text" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                    <a class="nav-link dropdown-toggle department_text" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false"></a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
@@ -64,115 +66,245 @@
                 </div>
 
                 <h4 class="title">Carrito</h4>
+                //Nombre;Edad,Sexo,DX,Ocupacion,Folio
 
                 <table class="table table-dark table-striped">
                     <thead>
                         <tr>
-                            <th>Imagen</th>
-                            <th>Nombre</th>
-                            <th>Precio</th>
-                            <th>Cantidad</th>
-                            <th>Subtotal</th>
+                            <th>Peso (kg)</th>
+                            <th>Talla (m)</th>
+                            <th>IMC </th>
+
+                            <th>PI</th>
+                            <!-- [estatura – 100 – ((estatura – 150) / 4)] -->
+                            <th>MG (%)</th>
+                            <!-- %Grasa=495/(1.0324-0.19077(log(cintura-cuello))+0.15456(log(altura)))-450 //hombres-->
+                            <!-- %Grasa=495/(1.29579-0.35004(log(cintura+cadera-cuello))+0.22100(log(altura)))-450 //Mujeres-->
+                            <th>Agua (%)</th>
+                            <th>MM (%)</th>
+                            <th>Cuello</th>
+                            <th>Cintura</th>
+                            <th>Cadera</th>
+                            <th>Brazo</th>
+                            <th>Muñeca</th>
+                            <th>PA</th>
+                            <th>FC y FR</th>
+                            <th>Fecha</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>
-                                <img src="images/aceite.jpg" width="60px" class="img-thumbnail" alt="aceite">
+                                <!-- <label data-toggle="tooltip" data-placement="top" title="43">43</label> <i class="fa fa-angle-double-up" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:green;"></i> -->
+                                <input class="form-control weight" type="number" value="45" min="1" style="width: 100px;">
                             </td>
                             <td>
-                                <p data-toggle="tooltip" data-placement="top" title="PlayStation Controler DualShock4, Magma Red - PlayStation 4 Standard Edition">Aceite Capullo 100% puro de canola 845 ml</p>
-                                <small class="text-muted float-left">Aceites de cocina</small>
-                                <small class="text-primary float-right delete_item">Eliminar</small>
+                                <input class="form-control height" type="number" value="1.50" min="0" step="0.01" style="width: 100px;">
+                                <!-- <label data-toggle="tooltip" data-placement="top" title="21.3">21.3</label> <i class="fa fa-angle-double-down" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:red;"></i> -->
                             </td>
                             <td>
-                                <small class="text-muted">
-                                    <del>
-                                        <span class="money_type">$</span>
-                                        <span class="">27.50</span>
-                                    </del>
-                                    <span> - </span>
-                                    <div class="btn-group">
-                                        <input class="form-control discount" type="number" value="0" min="0" max="100" style="width: 75px;height: 25px;">
-                                        <button type="button" class="btn btn-secondary" style="height: 25px;padding: 0;">%</button>
-                                    </div>
-                                </small>
-                                <br/>
-                                <span class="money_type">$</span>
-                                <span class="total_per_unit" data-price="27.50">27.50</span>
+                                <label data-toggle="tooltip" class="imc" data-placement="top" title="Sobrepeso">180</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="80">80</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="88">88</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="92">92</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="33">33</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="39">39</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="38">38</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="150/20">150/20</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="180/30">180/30</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="12/Enero/2018">12/Enero/2018</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="43">43</label>
+                                <i class="fa fa-angle-double-up" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:green;"></i>
 
-                                <i class="fas fa-eye-slash float-right" hidden></i>
-                                <i class="fas fa-eye float-right"> </i>
-                                <small class="text-primary float-right">Desc. </small>
                             </td>
                             <td>
-                                <input class="form-control quantity" type="number" value="1" min="1" style="width: 100px;">
+                                <label data-toggle="tooltip" data-placement="top" title="21.3">21.3</label>
+                                <i class="fa fa-angle-double-down" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:red;"></i>
                             </td>
                             <td>
-                                <span class="money_type">$</span>
-                                <span class="subtotal">27.50</span>
+                                <label data-toggle="tooltip" data-placement="top" title="Sobrepeso">180</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="80">80</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="88">88</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="92">92</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="33">33</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="39">39</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="38">38</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="150/20">150/20</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="180/30">180/30</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="12/Enero/2018">12/Enero/2018</label>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <img src="images/coke_600ml.jpg" width="60px" class="img-thumbnail" alt="Coke">
+                                <label data-toggle="tooltip" data-placement="top" title="43">43</label>
                             </td>
                             <td>
-                                <p data-toggle="tooltip" data-placement="top" title="">Refresco Coca Cola botella de 600 ml</p>
-                                <small class="text-muted float-left">Refresco</small>
-                                <small class="text-primary float-right delete_item">Eliminar</small>
+                                <label data-toggle="tooltip" data-placement="top" title="21.3">21.3</label>
                             </td>
                             <td>
-                                <span class="money_type">$</span>
-                                <span class="total_per_unit" data-price="13.50">13.50</span>
-                                <small class="text-primary float-right">Descuento</small>
+                                <label data-toggle="tooltip" data-placement="top" title="180">180</label>
                             </td>
                             <td>
-                                <input class="form-control quantity" type="number" value="1" min="1" style="width: 100px;">
+                                <label data-toggle="tooltip" data-placement="top" title="80">80</label>
                             </td>
                             <td>
-                                <span class="money_type">$</span>
-                                <span class="subtotal">13.50</span>
+                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            </td>
+                            <td>
+
+                                <label data-toggle="tooltip" data-placement="top" title="88">88</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="92">92</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="33">33</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="39">39</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="38">38</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="150/20">150/20</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="180/30">180/30</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="12/Enero/2018">12/Enero/2018</label>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <img src="images/sabritas.jpg" width="60px" class="img-thumbnail" alt="sabritas">
+                                <label data-toggle="tooltip" data-placement="top" title="43">43</label>
                             </td>
                             <td>
-                                <p data-toggle="tooltip" data-placement="top" title="Papas Ruffles sabor queso 200 g">Papas Ruffles sabor queso 200 g</p>
-                                <small class="text-muted float-left">Papas y Frituras</small>
-                                <small class="text-primary float-right delete_item">Eliminar</small>
+                                <label data-toggle="tooltip" data-placement="top" title="21.3">21.3</label>
                             </td>
                             <td>
-                                <span class="money_type">$</span>
-                                <span class="total_per_unit" data-price="38.00">38.00</span>
-                                <small class="text-primary float-right">Descuento</small>
+                                <label data-toggle="tooltip" data-placement="top" title="180">180</label>
                             </td>
                             <td>
-                                <input class="form-control quantity" type="number" value="1" min="1" style="width: 100px;">
+                                <label data-toggle="tooltip" data-placement="top" title="80">80</label>
                             </td>
                             <td>
-                                <span class="money_type">$</span>
-                                <span class="subtotal">38.00</span>
+                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="88">88</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="92">92</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="33">33</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="39">39</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="38">38</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="150/20">150/20</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="180/30">180/30</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="12/Enero/2018">12/Enero/2018</label>
                             </td>
                         </tr>
+
+
                     </tbody>
                 </table>
 
                 <div class="row total_block">
                     <div class="col-9">
-                        <p class="float-left">Total</p>
+                        <label class="float-left">Total</label>
                     </div>
                     <div class="col-3">
-                        <p class="float-right">
+                        <label class="float-right">
                             <span class="money_type">$</span>
                             <span class="total">0</span>
-                        </p>
+                        </label>
                     </div>
                 </div>
                 <!-- -######################################################################Altas -->
-                <div id="register">
+                <!-- <div id="register">
                     <div class="row">
                         <div class="offset-sm-3 col-sm-6">
                             <div class="form-group">
@@ -290,14 +422,14 @@
                             <input type="file" class="form-control" id="image">
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <hr>
     </main>
 
     <footer class="container">
-        <p>&copy; BMN 2017-2018</p>
+        <label>&copy; BMN 2017-2018</label>
     </footer>
 
     <script src="js/jquery/jquery-3.2.1.min.js"></script>
@@ -313,7 +445,7 @@
     <script src="js/elevatezoom/jquery.elevateZoom-3.0.8.min.js"></script>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
 
             const business_name = "Amazon";
 
@@ -323,6 +455,86 @@
             });
 
         })
+
+
+
+        function getIMC(weight, height) { //height in meters
+
+            var imc = 0;
+            if (height != 0) {
+                imc = weight / (height * height);
+            }
+            return imc;
+        }
+
+        function getPI(height) {
+
+            var h = height * 100;
+
+            var pi = h - 100 - ((h - 150) / 4);
+
+            return pi;
+        }
+
+        $(document).on('keyup mouseup', ".height", function () {
+            console.log("entre");
+            var height = $(this).val();
+            var tr = $(this).closest('tr');
+            var weight = tr.find('.weight').val();
+            var imc = tr.find('.imc');
+            var value = getIMC(weight, height);
+            var category = getIMCCategory(value);
+            imc.text(value.toFixed(2));
+            imc.attr("data-value", value);
+            imc.attr("title", category);
+        });
+
+        $(document).on('keyup mouseup', ".weight", function () {
+            var weight = $(this).val();
+            var tr = $(this).closest('tr');
+            var height = tr.find('.height').val();
+            var imc = tr.find('.imc');
+            var value = getIMC(weight, height);
+            var category = getIMCCategory(value);
+            imc.text(value.toFixed(2));
+            imc.attr("data-value", value);
+            imc.attr("title", category);
+
+        });
+
+        function getIMCCategory(imc) {
+            var category = "";
+
+            console.log(imc);
+
+            if (imc < 16.00)
+                category = "Infrapeso: Delgadez Severa";
+            else
+            if (imc < 16.99)
+                category = "Infrapeso: Delgadez moderada";
+            else
+            if (imc < 18.49)
+                category = "Infrapeso: Delgadez aceptable";
+            else
+            if (imc < 24.99)
+                category = "Peso Normal";
+            else
+            if (imc < 24.99)
+                category = "Sobrepeso";
+            else
+            if (imc < 34.99)
+                category = "Obeso: Tipo I";
+            else
+            if (imc < 40.00)
+                category = "Obeso: Tipo II";
+            else
+                category = "Obeso: Tipo III";
+
+      
+
+            return category;
+
+        }
 
 
         function confirmDialog(item) {
@@ -337,7 +549,7 @@
                     cancel: {
                         text: 'Cancelar',
                         btnClass: 'btn-secondary',
-                        action: function() {
+                        action: function () {
                             $.alert('Canceled!');
                         }
                     },
@@ -345,7 +557,7 @@
                         text: 'Eliminar',
                         btnClass: 'btn-primary',
                         keys: ['enter', 'shift'],
-                        action: function() {
+                        action: function () {
                             var cart = item.closest('table');
                             var block = item.closest('tr');
                             block.remove();
