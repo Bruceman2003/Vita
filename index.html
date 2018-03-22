@@ -73,6 +73,14 @@
                         <tr>
                             <th>Peso (kg)</th>
                             <th>Talla (m)</th>
+                           
+                            <th>Cuello</th>
+                            <th>Cintura</th>
+                            <th>Cadera</th>
+                            <th>Brazo</th>
+                            <th>Muñeca</th>
+                            <th>PA</th>
+                            <th>FC y FR</th>
                             <th>IMC </th>
 
                             <th>PI</th>
@@ -82,13 +90,6 @@
                             <!-- %Grasa=495/(1.29579-0.35004(log(cintura+cadera-cuello))+0.22100(log(altura)))-450 //Mujeres-->
                             <th>Agua (%)</th>
                             <th>MM (%)</th>
-                            <th>Cuello</th>
-                            <th>Cintura</th>
-                            <th>Cadera</th>
-                            <th>Brazo</th>
-                            <th>Muñeca</th>
-                            <th>PA</th>
-                            <th>FC y FR</th>
                             <th>Fecha</th>
                         </tr>
                     </thead>
@@ -96,41 +97,32 @@
                         <tr>
                             <td>
                                 <!-- <label data-toggle="tooltip" data-placement="top" title="43">43</label> <i class="fa fa-angle-double-up" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:green;"></i> -->
-                                <input class="form-control weight" type="number" value="45" min="1" style="width: 100px;">
+                                <input class="form-control weight" type="number" value="45" min="1" style="width: 85px;">
                             </td>
                             <td>
-                                <input class="form-control height" type="number" value="1.50" min="0" step="0.01" style="width: 100px;">
+                                <input class="form-control height" type="number" value="1.50" min="0" step="0.01" style="width: 85px;">
                                 <!-- <label data-toggle="tooltip" data-placement="top" title="21.3">21.3</label> <i class="fa fa-angle-double-down" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:red;"></i> -->
                             </td>
+                            
                             <td>
-                                <label data-toggle="tooltip" class="imc" data-placement="top" title="Sobrepeso">180</label>
+                                    <input class="form-control neck" type="number" value="35" min="0" step="0.5" style="width: 85px;">
+                                <!-- <label data-toggle="tooltip" data-placement="top" title="55">55</label> -->
                             </td>
                             <td>
-                                <label data-toggle="tooltip" data-placement="top" title="80">80</label>
+                                    <input class="form-control waist" type="number" value="35" min="0" step="0.5" style="width: 85px;">
+                                <!-- <label data-toggle="tooltip" data-placement="top" title="55">55</label> -->
                             </td>
                             <td>
-                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                                    <input class="form-control arm" type="number" value="35" min="0" step="0.5" style="width: 85px;">
+                                <!-- <label data-toggle="tooltip" data-placement="top" title="33">33</label>
+                            </td> -->
+                            <td>
+                                    <input class="form-control wrist" type="number" value="35" min="0" step="0.5" style="width: 85px;">
+                                <!-- <label data-toggle="tooltip" data-placement="top" title="39">39</label> -->
                             </td>
                             <td>
-                                <label data-toggle="tooltip" data-placement="top" title="88">88</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="92">92</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="33">33</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="39">39</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="38">38</label>
+                                    <input class="form-control waist" type="number" value="35" min="0" step="0.5" style="width: 85px;">
+                                <!-- <label data-toggle="tooltip" data-placement="top" title="38">38</label> -->
                             </td>
                             <td>
                                 <label data-toggle="tooltip" data-placement="top" title="150/20">150/20</label>
@@ -139,7 +131,22 @@
                                 <label data-toggle="tooltip" data-placement="top" title="180/30">180/30</label>
                             </td>
                             <td>
-                                <label data-toggle="tooltip" data-placement="top" title="12/Enero/2018">12/Enero/2018</label>
+                                    <label data-toggle="tooltip" class="imc" data-placement="top" title="Sobrepeso">22.82</label>
+                                </td>
+                                <td>
+                                    <label data-toggle="tooltip" data-placement="top" title="80">80</label>
+                                </td>
+                                <td>
+                                    <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                                </td>
+                                <td>
+                                    <label data-toggle="tooltip" data-placement="top" title="88">88</label>
+                                </td>
+                                <td>
+                                    <label data-toggle="tooltip" data-placement="top" title="92">92</label>
+                                </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="12/Enero/2018">15/01/18</label>
                             </td>
                         </tr>
                         <tr>
@@ -168,53 +175,11 @@
                                 <label data-toggle="tooltip" data-placement="top" title="88">88</label>
                             </td>
                             <td>
-                                <label data-toggle="tooltip" data-placement="top" title="92">92</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="33">33</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="39">39</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="38">38</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="150/20">150/20</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="180/30">180/30</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="12/Enero/2018">12/Enero/2018</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="43">43</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="21.3">21.3</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="180">180</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="80">80</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
-                            </td>
-                            <td>
-
-                                <label data-toggle="tooltip" data-placement="top" title="88">88</label>
-                            </td>
+                                    <label data-toggle="tooltip" data-placement="top" title="150/20">150/20</label>
+                                </td>
+                                <td>
+                                    <label data-toggle="tooltip" data-placement="top" title="180/30">180/30</label>
+                                </td>
                             <td>
                                 <label data-toggle="tooltip" data-placement="top" title="92">92</label>
                             </td>
@@ -230,69 +195,40 @@
                             <td>
                                 <label data-toggle="tooltip" data-placement="top" title="38">38</label>
                             </td>
+                         
                             <td>
-                                <label data-toggle="tooltip" data-placement="top" title="150/20">150/20</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="180/30">180/30</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="12/Enero/2018">12/Enero/2018</label>
+                                <label data-toggle="tooltip" data-placement="top" title="12/Enero/2018">12/01/18</label>
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="43">43</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="21.3">21.3</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="180">180</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="80">80</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="88">88</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="92">92</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="33">33</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="39">39</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="38">38</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="150/20">150/20</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="180/30">180/30</label>
-                            </td>
-                            <td>
-                                <label data-toggle="tooltip" data-placement="top" title="12/Enero/2018">12/Enero/2018</label>
-                            </td>
-                        </tr>
-
-
+                     
                     </tbody>
+                    <tfoot>
+                            <tr>
+                                <th>Peso (kg)</th>
+                                <th>Talla (m)</th>
+                               
+                                <th>Cuello</th>
+                                <th>Cintura</th>
+                                <th>Cadera</th>
+                                <th>Brazo</th>
+                                <th>Muñeca</th>
+                                <th>PA</th>
+                                <th>FC y FR</th>
+                                <th>IMC </th>
+    
+                                <th>PI</th>
+                                <!-- [estatura – 100 – ((estatura – 150) / 4)] -->
+                                <th>MG (%)</th>
+                                <!-- %Grasa=495/(1.0324-0.19077(log(cintura-cuello))+0.15456(log(altura)))-450 //hombres-->
+                                <!-- %Grasa=495/(1.29579-0.35004(log(cintura+cadera-cuello))+0.22100(log(altura)))-450 //Mujeres-->
+                                <th>Agua (%)</th>
+                                <th>MM (%)</th>
+                                <th>Fecha</th>
+                            </tr>
+                    </tfoot>
                 </table>
 
-                <div class="row total_block">
+                <!-- <div class="row total_block">
                     <div class="col-9">
                         <label class="float-left">Total</label>
                     </div>
@@ -302,7 +238,7 @@
                             <span class="total">0</span>
                         </label>
                     </div>
-                </div>
+                </div> -->
                 <!-- -######################################################################Altas -->
                 <!-- <div id="register">
                     <div class="row">
