@@ -27,7 +27,31 @@
     font-weight: bold;
     padding-left: 15px
 }
-th{
-    font-size: 12px;
 
+th {
+    font-size: 12px;
+}
+
+td {
+    font-size: 14px;
+}
+
+.title_row {
+    font-weight: bold;
+    padding: 12px;
+}
+
+.body:not(.active) {
+    display: none;
+}
+
+.user_row {
+    cursor: pointer;
+    padding: 12px;
+}
+
+.user_row:hover {
+    background-color: #000;
+    color: white;
+    font-weight: bold;
 }
