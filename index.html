@@ -1423,9 +1423,11 @@
             imc.attr("title", category);
         });
 
-        $(document).on('click', ".user_row", function () {
+        $(document).on('click', ".header", function () {
             console.log("entre");
-            var body = $(this).find(".body");
+
+            var parent=$(this).closest(".user_row");
+            var body = parent.find(".body");
             if (body.is(":visible")) {
 
 body.slideUp();
