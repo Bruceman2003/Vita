@@ -1,0 +1,367 @@
+<div class="user_row">
+    <div class="row header">
+        <div class="col">
+            <label data-toggle="tooltip" data-placement="top" title="234F43">234F43</label>
+        </div>
+        <div class="col">
+            <label data-toggle="tooltip" data-placement="top" title="Yeimi Diaz Hernandez">Yeimi Diaz Hernandez</label>
+        </div>
+        <div class="col">
+            <label data-toggle="tooltip" data-placement="top" title="Femenino">Femenino</label>
+        </div>
+        <div class="col">
+            <label data-toggle="tooltip" data-placement="top" title="80">Maestra</label>
+        </div>
+        <div class="col">
+            <label data-toggle="tooltip" data-placement="top" title="Ninguno">Ninguno</label>
+        </div>
+        <div class="col">
+            <label data-toggle="tooltip" data-placement="top" title="21/02/1990">21/02/1990</label>
+        </div>
+    </div>
+    <div class="row body">
+        <div class="col">
+            <table class="table table-dark table-striped table-hover">
+                <thead>
+                    <tr>
+                        <!-- 
+                                            dob = new Date(dob);
+                                            var today = new Date();
+                                            var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
+                                            $('#age').html(age+' years old'); -->
+                        <th>Peso (kg)</th>
+                        <th>Talla (m)</th>
+
+                        <th>Cuello</th>
+                        <th>Cintura</th>
+                        <th>Cadera</th>
+                        <th>Brazo</th>
+                        <th>Muñeca</th>
+                        <th>PA</th>
+                        <th>FC y FR</th>
+                        <th>IMC </th>
+
+                        <th>PI</th>
+                        <!-- [estatura – 100 – ((estatura – 150) / 4)] -->
+                        <th>MG (%)</th>
+                        <!-- %Grasa=495/(1.0324-0.19077(log(cintura-cuello))+0.15456(log(altura)))-450 //hombres-->
+                        <!-- %Grasa=495/(1.29579-0.35004(log(cintura+cadera-cuello))+0.22100(log(altura)))-450 //Mujeres-->
+                        <th>Agua (%)</th>
+                        <th>MM (%)</th>
+                        <th>Edad</th>
+                        <th>Fecha</th>
+                        <th style="font-size: 20px;text-align: center;cursor:pointer;">
+                            <i class="fa fa-plus-circle" data-toggle="tooltip" data-placement="right" title="Nuevo" style="color:#007bff;"></i>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr hidden>
+                        <td>
+                            <!-- <label data-toggle="tooltip" data-placement="top" title="43">43</label> <i class="fa fa-angle-double-up" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:green;"></i> -->
+                            <input class="form-control weight" type="number" value="45" min="1" style="width: 85px;">
+                        </td>
+                        <td>
+                            <input class="form-control height" type="number" value="1.50" min="0" step="0.01" style="width: 85px;">
+                            <!-- <label data-toggle="tooltip" data-placement="top" title="21.3">21.3</label> <i class="fa fa-angle-double-down" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:red;"></i> -->
+                        </td>
+
+                        <td>
+                            <input class="form-control neck" type="number" value="35" min="0" step="0.5" style="width: 85px;">
+                            <!-- <label data-toggle="tooltip" data-placement="top" title="55">55</label> -->
+                        </td>
+                        <td>
+                            <input class="form-control waist" type="number" value="35" min="0" step="0.5" style="width: 85px;">
+                            <!-- <label data-toggle="tooltip" data-placement="top" title="55">55</label> -->
+                        </td>
+                        <td>
+                            <input class="form-control arm" type="number" value="35" min="0" step="0.5" style="width: 85px;">
+                            <!-- <label data-toggle="tooltip" data-placement="top" title="33">33</label>
+                                        </td> -->
+                            <td>
+                                <input class="form-control wrist" type="number" value="35" min="0" step="0.5" style="width: 85px;">
+                                <!-- <label data-toggle="tooltip" data-placement="top" title="39">39</label> -->
+                            </td>
+                            <td>
+                                <input class="form-control waist" type="number" value="35" min="0" step="0.5" style="width: 85px;">
+                                <!-- <label data-toggle="tooltip" data-placement="top" title="38">38</label> -->
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="150/20">150/20</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="180/30">180/30</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" class="imc" data-placement="top" title="Sobrepeso">22.82</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="80">80</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="88">88</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="92">92</label>
+                            </td>
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="92">92</label>
+                            </td>
+
+                            <td>
+                                <label data-toggle="tooltip" data-placement="top" title="12/Enero/2018">15/01/18</label>
+                            </td>
+                            <td>
+
+                                <i class="fa fa-check-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:green;"></i>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="43">43</label>
+                            <i class="fa fa-angle-double-up" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:green;"></i>
+
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="21.3">21.3</label>
+                            <i class="fa fa-angle-double-down" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:red;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="Sobrepeso">180</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="80">80</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="88">88</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="150/20">150/20</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="180/30">180/30</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="92">92</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="33">33</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="39">39</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="38">38</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="92">92</label>
+
+                        </td>
+
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="12/Enero/2018">12/01/18</label>
+                        </td>
+                        <td>
+                            <i class="fa fa-times-circle" data-toggle="tooltip" data-placement="right" title="Eliminar" style="color:red;"></i>
+                            <i class="fa fa-check-circle" data-toggle="tooltip" data-placement="right" title="Guardar" style="color:green;"></i>
+                            <i class="fa fa-pencil" data-toggle="tooltip" data-placement="right" title="Editar" style="color:yellow;"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="43">43</label>
+                            <i class="fa fa-angle-double-up" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:green;"></i>
+
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="21.3">21.3</label>
+                            <i class="fa fa-angle-double-down" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:red;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="Sobrepeso">180</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="80">80</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="88">88</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="150/20">150/20</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="180/30">180/30</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="92">92</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="33">33</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="39">39</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="38">38</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="92">92</label>
+
+                        </td>
+
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="12/Enero/2018">12/01/18</label>
+                        </td>
+                        <td>
+                            <i class="fa fa-times-circle" data-toggle="tooltip" data-placement="right" title="Eliminar" style="color:red;"></i>
+                            <i class="fa fa-check-circle" data-toggle="tooltip" data-placement="right" title="Guardar" style="color:green;"></i>
+                            <i class="fa fa-pencil" data-toggle="tooltip" data-placement="right" title="Editar" style="color:yellow;"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="43">43</label>
+                            <i class="fa fa-angle-double-up" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:green;"></i>
+
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="21.3">21.3</label>
+                            <i class="fa fa-angle-double-down" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:red;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="Sobrepeso">180</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="80">80</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="88">88</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="150/20">150/20</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="180/30">180/30</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="92">92</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="55">55</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="33">33</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="39">39</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="38">38</label>
+                            <i class="fa fa-dot-circle" data-toggle="tooltip" data-placement="right" title="18.5%" style="color:white;"></i>
+                        </td>
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="92">92</label>
+
+                        </td>
+
+                        <td>
+                            <label data-toggle="tooltip" data-placement="top" title="12/Enero/2018">12/01/18</label>
+                        </td>
+                        <td>
+                            <i class="fa fa-times-circle" data-toggle="tooltip" data-placement="right" title="Eliminar" style="color:red;"></i>
+                            <i class="fa fa-check-circle" data-toggle="tooltip" data-placement="right" title="Guardar" style="color:green;"></i>
+                            <i class="fa fa-pencil" data-toggle="tooltip" data-placement="right" title="Editar" style="color:yellow;"></i>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Peso (kg)</th>
+                        <th>Talla (m)</th>
+
+                        <th>Cuello</th>
+                        <th>Cintura</th>
+                        <th>Cadera</th>
+                        <th>Brazo</th>
+                        <th>Muñeca</th>
+                        <th>PA</th>
+                        <th>FC y FR</th>
+                        <th>IMC </th>
+
+                        <th>PI</th>
+                        <!-- [estatura – 100 – ((estatura – 150) / 4)] -->
+                        <th>MG (%)</th>
+                        <!-- %Grasa=495/(1.0324-0.19077(log(cintura-cuello))+0.15456(log(altura)))-450 //hombres-->
+                        <!-- %Grasa=495/(1.29579-0.35004(log(cintura+cadera-cuello))+0.22100(log(altura)))-450 //Mujeres-->
+                        <th>Agua (%)</th>
+                        <th>MM (%)</th>
+                        <th>Edad</th>
+                        <th>Fecha</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
