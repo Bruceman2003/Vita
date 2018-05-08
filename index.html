@@ -67,27 +67,7 @@
 
                 <h4 class="title">Pacientes</h4>
 
-
-                <div class="row title_row">
-                    <div class="col">
-                        <label>Folio</label>
-                    </div>
-                    <div class="col">
-                        <label>Nombre</label>
-                    </div>
-                    <div class="col">
-                        <label>Sexo</label>
-                    </div>
-                    <div class="col">
-                        <label>Ocupacion</label>
-                    </div>
-                    <div class="col">
-                        <label>Diagnostico</label>
-                    </div>
-                    <div class="col">
-                        <label>Fecha nacimiento</label>
-                    </div>
-                </div>
+                <div class="_header"></div>
                 <div class="user_list">
                     <div class="user_row">
                         <div class="row header">
@@ -1247,33 +1227,7 @@
                     </div>
                 </div>
 
-                <div class="row title_row">
-                    <div class="col">
-                        <label>Folio</label>
-                    </div>
-                    <div class="col">
-                        <label>Nombre</label>
-                    </div>
-                    <div class="col">
-                        <label>Sexo</label>
-                    </div>
-                    <div class="col">
-                        <label>Ocupacion</label>
-                    </div>
-                    <div class="col">
-                        <label>Diagnostico</label>
-                    </div>
-                    <div class="col">
-                        <label>Fecha nacimiento</label>
-                    </div>
-                </div>
-
-
-
-
-
-
-
+                <div class="_header"></div>
 
                 <!-- <div class="row total_block">
                     <div class="col-9">
@@ -1426,147 +1380,8 @@
     <script src="js/fontawesome/fontawesome-all.min.js"></script>
     <script src="js/fontawesome/fontawesome.min.js"></script>
     <script src="js/elevatezoom/jquery.elevateZoom-3.0.8.min.js"></script>
-
+    <script src="js/index.js"></script>
     <script>
-        $(document).ready(function () {
-
-            const business_name = "Amazon";
-
-
-            $('img').elevateZoom({
-                scrollZoom: true
-            });
-
-        })
-
-
-
-        function getIMC(weight, height) { //height in meters
-
-            var imc = 0;
-            if (height != 0) {
-                imc = weight / (height * height);
-            }
-            return imc;
-        }
-
-        function getPI(height) {
-
-            var h = height * 100;
-
-            var pi = h - 100 - ((h - 150) / 4);
-
-            return pi;
-        }
-
-        $(document).on('keyup mouseup', ".height", function () {
-            console.log("entre");
-            var height = $(this).val();
-            var tr = $(this).closest('tr');
-            var weight = tr.find('.weight').val();
-            var imc = tr.find('.imc');
-            var value = getIMC(weight, height);
-            var category = getIMCCategory(value);
-            imc.text(value.toFixed(2));
-            imc.attr("data-value", value);
-            imc.attr("title", category);
-        });
-
-        $(document).on('click', ".header", function () {
-            console.log("entre");
-
-            var parent=$(this).closest(".user_row");
-            var body = parent.find(".body");
-            if (body.is(":visible")) {
-
-body.slideUp();
-
-            } else {
-
-body.slideDown();
-
-            }
-
-        });
-
-        $(document).on('keyup mouseup', ".weight", function () {
-            var weight = $(this).val();
-            var tr = $(this).closest('tr');
-            var height = tr.find('.height').val();
-            var imc = tr.find('.imc');
-            var value = getIMC(weight, height);
-            var category = getIMCCategory(value);
-            imc.text(value.toFixed(2));
-            imc.attr("data-value", value);
-            imc.attr("title", category);
-
-        });
-
-        function getIMCCategory(imc) {
-            var category = "";
-
-            console.log(imc);
-
-            if (imc < 16.00)
-                category = "Infrapeso: Delgadez Severa";
-            else
-            if (imc < 16.99)
-                category = "Infrapeso: Delgadez moderada";
-            else
-            if (imc < 18.49)
-                category = "Infrapeso: Delgadez aceptable";
-            else
-            if (imc < 24.99)
-                category = "Peso Normal";
-            else
-            if (imc < 24.99)
-                category = "Sobrepeso";
-            else
-            if (imc < 34.99)
-                category = "Obeso: Tipo I";
-            else
-            if (imc < 40.00)
-                category = "Obeso: Tipo II";
-            else
-                category = "Obeso: Tipo III";
-
-
-
-            return category;
-
-        }
-
-
-        function confirmDialog(item) {
-            $.confirm({
-                theme: 'dark',
-                type: 'orange',
-                icon: 'fa fa-warning',
-                title: 'Advertencia!',
-                content: '¿Está seguro de que desea eliminar?',
-                buttons: {
-
-                    cancel: {
-                        text: 'Cancelar',
-                        btnClass: 'btn-secondary',
-                        action: function () {
-                            $.alert('Canceled!');
-                        }
-                    },
-                    confirm: {
-                        text: 'Eliminar',
-                        btnClass: 'btn-primary',
-                        keys: ['enter', 'shift'],
-                        action: function () {
-                            var cart = item.closest('table');
-                            var block = item.closest('tr');
-                            block.remove();
-                            getTotalSale(cart);
-                        }
-                    }
-                }
-            });
-        };
     </script>
     <!-- poner ofertas de 2 por uno -->
     <!-- ver los de kilos en azucar -->

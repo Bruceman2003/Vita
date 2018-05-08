@@ -51,6 +51,10 @@ td {
     cursor: pointer;
     padding: 12px;
 }
+/* .user_row label{
+    cursor: pointer;
+    
+} */
 
 .user_row:hover {
     background-color: #000;
