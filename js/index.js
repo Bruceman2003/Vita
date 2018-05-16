@@ -161,7 +161,8 @@ function user_row() {
        name: "",
        gender: "",
        profession: "",
-       birthday: ""
+       birthday: "",
+
 
     };
  
@@ -186,7 +187,7 @@ function user_row() {
     row += '<label data-toggle="tooltip" data-placement="top" title="Ninguno">Ninguno</label>';
     row += '</div>';
     row += '<div class="col">';
-    row += '<label data-toggle="tooltip" data-placement="top" title="21/02/1990">21/02/1990</label>';
+    row += '<label data-toggle="tooltip" data-placement="top" title="'+value["birthday"]+'">'+value["birthday"]+'</label>';
     row += '</div>';
     row += '</div>';
     row += '<div class="row body">';
